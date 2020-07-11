@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome</title>
 </head>
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        background: #464646;
+        color: #eee;
+    }
+
+    .es_container {
+        padding: 10vh 10vw;
+        position: relative;
+        display: grid;
+        grid-template-rows: 200px 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-row-gap: 15px;
+        height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+
+    .es_container>div {
+        width: 100%;
+    }
+
+    .header {
+        background-color: #efcd19;
+        text-align: end;
+
+    }
+
+    .header>img {
+
+        height: 200px;
+    }
+
+    .sections_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 15px;
+    }
+
+    .sections_container>div {
+
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+    }
+
+    .sections_container>div>img {
+        max-height: 10vh;
+    }
+</style>
+
 <body>
-    <a href="./public/home.html">Sales App</a>
+    <div class="es_container">
+        <div class="header">
+            <img id="header_logo" src="imgs/logo.png">
+        </div>
+        <div class="sections_container">
+            <div id="section_git"><img alt="Github" src="imgs/github.svg"></div>
+            <div id="section_medium"><img alt="Medium" src="imgs/medium.svg"></div>
+            <div id="section_youtube"><img alt="YouTube" src="imgs/youtube.svg"></div>
+        </div>
+        <div class="stream_container">
+            <!-- Streams
+            Recents -->
+        </div>
+        <div class="contact_container">
+            <!-- Contacts -->
+        </div>
+    </div>
 </body>
+<script>
+    (() => {
+        const setupClick = (id, link) => {
+            document.getElementById(id).onclick = () => { window.open(link, "_blank") }
+        }
+        (() => { setupClick('section_git', 'https://github.com/subodhkumar') })();
+        (() => { setupClick('section_medium', 'https://medium.com/@subodhkumarjc') })();
+        (() => { setupClick('section_youtube', 'https://www.youtube.com/channel/UC-XCZ0sZPAyvUgzXhBhwpdQ') })();
+    })()
+</script>
+
 </html>
