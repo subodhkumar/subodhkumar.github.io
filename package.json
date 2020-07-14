@@ -1,0 +1,23 @@
+{
+  "name": "subodhkumar.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio of Subodh Kumar",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subodhkumar/subodhkumar.github.io.git"
+  },
+  "author": "Subodhkumarjc@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subodhkumar/subodhkumar.github.io/issues"
+  },
+  "homepage": "https://github.com/subodhkumar/subodhkumar.github.io#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
